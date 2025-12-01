@@ -1,6 +1,4 @@
-  float cloudY;
-  float cloudY2;
-  float cloudY3;
+
  
  ArrayList<Cloud> clouds;
  
