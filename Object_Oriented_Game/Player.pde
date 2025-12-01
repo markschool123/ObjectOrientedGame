@@ -19,7 +19,21 @@ class Player{
     if (keyPressed && keyCode == DOWN) {
       acc.y=+0.2;
     }
-    pos.add(acc);
+    vel.add(acc);
+    vel.limit(7);
+    pos.add(vel);
+    
+      if (pos.y > 400) {
+      pos.y=400;
+      vel.y=0;
+    }
+    //makes sure that the bird doesnt fall off the screen
+    if (pos.y < 0) {
+      pos.y=0;
+      vel.y=0;
+    }
+  
+    
     
   }
 
