@@ -1,5 +1,10 @@
+
   Player p;
   
+
+
+ 
+
  ArrayList<Cloud> clouds;
  
  boolean gameOver;
