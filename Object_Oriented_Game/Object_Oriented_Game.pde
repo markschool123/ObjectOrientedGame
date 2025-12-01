@@ -1,11 +1,14 @@
-  float cloudY;
-  float cloudY2;
-  float cloudY3;
- 
+  Player p;
+  
  ArrayList<Cloud> clouds;
+ 
+ boolean gameOver;
+ 
  
 void setup() { 
   size(400,400); 
+  
+ p = new Player();
 
     
     clouds = new ArrayList<Cloud>();
@@ -17,14 +20,14 @@ void setup() {
 
 void draw() { 
   background(113,211,252); 
-  
-  fill(255);
-  ellipse(140,mouseY,30,30);
    
    for(Cloud c : clouds) {
      c.update();
      c.display();
    }
+   p.update();
+   p.display();
+   
 }
 
  
