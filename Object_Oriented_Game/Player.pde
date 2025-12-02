@@ -20,7 +20,7 @@ class Player{
       acc.y=+0.2;
     }
     vel.add(acc);
-    vel.limit(7);
+    vel.limit(6);
     pos.add(vel);
     
       if (pos.y > 400) {
