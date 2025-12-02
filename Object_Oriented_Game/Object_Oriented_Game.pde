@@ -2,7 +2,9 @@
   
  ArrayList<Cloud> clouds;
  
- boolean gameOver;
+ ArrayList<Pipe> pipes; 
+ 
+ boolean gameOver=false;
  
  
 void setup() { 
@@ -10,6 +12,7 @@ void setup() {
   
  p = new Player();
 
+pipes = new ArrayList<Pipe>();
     
     clouds = new ArrayList<Cloud>();
      for (int i = 0; i < 10; i++) {
