@@ -1,25 +1,29 @@
 class Cloud { 
-  float x,y;
-  float speed;
+
   
+  PVector pos; 
+  PVector speed;
   Cloud() { 
-    x=random(-200,width);
-    y=random(30,250);
-    speed=random(1,2.5);
+    pos = new PVector(random(-300, -50), random(30, 250));
+    speed = new PVector(random(1, 2.5), 0);
   }
   
   void update() { 
-    x+=speed;
-    if (x>width+100) {
-      x = random(-300, -100);
-      y = random(30, 250);
-      speed = random(1, 2.5);
+    
+    pos.add(speed);
+
+
+    
+    if (pos.x>width+100) {
+      pos.x = random(-300, -100);
+      pos.y = random(30, 250);
+      speed.x = random(1, 2.5);
     }
   }
   
   
   void display() {
-    drawCloud(x,y);
+    drawCloud(pos.x,pos.y);
   }
 }
   
