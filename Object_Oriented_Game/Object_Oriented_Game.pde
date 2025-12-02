@@ -12,12 +12,18 @@ void setup() {
   
  p = new Player();
 
-pipes = new ArrayList<Pipe>();
+ pipes = new ArrayList<Pipe>();
     
     clouds = new ArrayList<Cloud>();
      for (int i = 0; i < 10; i++) {
     clouds.add(new Cloud());
   }
+  
+      pipes = new ArrayList<Pipe>();
+     for (int i = 0; i < 2; i++) {
+    pipes.add(new Pipe());
+  }
+  
 }
 
 
@@ -28,9 +34,15 @@ void draw() {
      c.update();
      c.display();
    }
+   
+   for ( Pipe pipe : pipes) {
+   pipe.update();
+   pipe.display();
+}
+   
    p.update();
    p.display();
-   
+
 }
 
  
