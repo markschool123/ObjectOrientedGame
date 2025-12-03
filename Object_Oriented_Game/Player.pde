@@ -28,6 +28,8 @@ class Player{
       vel.y=0;
     }
     //makes sure that the bird doesnt fall off the screen
+  
+  
     if (pos.y < 0) {
       pos.y=0;
       vel.y=0;
