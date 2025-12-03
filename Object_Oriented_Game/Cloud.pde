@@ -1,6 +1,6 @@
 class Cloud { 
 
-  
+  //speed and position values for the cloud, all with random values
   PVector pos; 
   PVector speed;
   Cloud() { 
@@ -13,7 +13,7 @@ class Cloud {
     pos.add(speed);
 
 
-    
+    // if clouds go across screen, reset to start position and give random values
     if (pos.x>width+100) {
       pos.x = random(-300, -100);
       pos.y = random(30, 250);
@@ -29,7 +29,7 @@ class Cloud {
   
   
   
-  
+  //draw the cloyd
   void drawCloud(float x, float y) {
     fill(255);
   stroke(0);
