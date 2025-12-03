@@ -18,15 +18,28 @@ class Pipe {
     top= random(50,20);
     
     bottom = height - (top +gap);
+    
+
+ 
+  }
+  
+  
+  void reset() {
+    top= random(40,250);
+    bottom=height-(top-gap);
+    pos.x=width+100;
   }
   
   void update() { 
-    pos.add(speed);
-     if (pos.x>width+100) {
-      pos.x = 0;
-      pos.y = 0;
+ 
+     pos.add(speed);
+  if (pos.x < -pipeWidth) {
+    gap=random(80,250);
+    top=random(40,250);
+    bottom=height-(top+gap);
+    pos.x=500;
+  }
       
-    }
   }
   
   void display() {
