@@ -39,9 +39,23 @@ void draw() {
 
    p.update();
    p.display();
+   
+   if (p.pos.x>pipe.pos.x) { 
+     youDied();
+   }
 
 
 }
+
+void youDied() { 
+  fill(0); 
+  textAlign(CENTER, CENTER);
+  textSize(40);
+  text("YOU DIED", width/2, height/2);
+}
+
+
+  
 
  
   
