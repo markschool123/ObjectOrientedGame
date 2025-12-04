@@ -35,14 +35,15 @@ void draw() {
    for ( Pipe pipe : pipes) {
    pipe.update();
    pipe.display();
+      
+ 
+   
 }
 
    p.update();
    p.display();
    
-   if (p.pos.x>pipe.pos.x) { 
-     youDied();
-   }
+
 
 
 }
