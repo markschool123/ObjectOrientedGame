@@ -48,7 +48,9 @@ class Pipe {
     rect(pos.x,0,pipeWidth,top);
     rect(pos.x,height-bottom, pipeWidth, bottom);
     
-         if (p.pos.x+15> pos.x && p.pos.x - 15< pos.x+15) {
+         if ((p.pos.x+15> pos.x && p.pos.x - 15< pos.x+15) &&
+         (p.pos.y-15<top || p.pos.y+15> height-bottom))
+         {
      youDied();
    }
     

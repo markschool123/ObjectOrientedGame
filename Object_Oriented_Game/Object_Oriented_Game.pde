@@ -43,16 +43,20 @@ void draw() {
    p.update();
    p.display();
    
-
+if (gameOver==true) {
+  fill(222,22,222);
+ ellipse(200,200,600,600);
+   fill(0); 
+  textAlign(CENTER, CENTER);
+  textSize(40);
+  text("YOU DIED", width/2, height/2);
+}
 
 
 }
 
 void youDied() { 
-  fill(0); 
-  textAlign(CENTER, CENTER);
-  textSize(40);
-  text("YOU DIED", width/2, height/2);
+  gameOver=true;
 }
 
 
