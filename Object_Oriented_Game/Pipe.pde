@@ -28,10 +28,12 @@ class Pipe {
   
 
   void update() { 
+    
     // add speed to the pipe so it moves across the screen
      pos.add(speed);
+     
      //once the pipe goes off screen, it resets to a new position and gap
-  if (pos.x < 0) {
+  if (pos.x < -pipeWidth) {
     gap=random(80,250);
     top=random(40,250);
     bottom=height-(top+gap);
