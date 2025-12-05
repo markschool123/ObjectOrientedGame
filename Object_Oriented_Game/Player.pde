@@ -1,11 +1,11 @@
 class Player{ 
-  //PVectors for position, acceleratio, and velocity
+  //PVectors for position, acceleration, and velocity
   PVector pos; 
   PVector vel;
   PVector acc;
   
   Player() { 
-    //set values for each PVector
+    //set values for players position, vel, and acc when the game starts
     vel= new PVector(0,0);
     pos= new PVector(130,200);
     acc= new PVector(0,0);
@@ -14,7 +14,7 @@ class Player{
   void update() { 
     //acceleration starts at 0
     acc.set(0,0);
-    //if i press the key up or down, acceleration is applied
+    //if i press the key up or down, acceleration builds
     if (keyPressed && keyCode == UP) { 
       acc.y=-0.2;
     }
@@ -23,7 +23,7 @@ class Player{
       acc.y=+0.2;
     }
     //velocity adds acceleration to give float effect, the maximum for the acc is 6
-    //vel is added to the players position
+    //vel is added to the players position, allows floaty movement
     vel.add(acc);
     vel.limit(6);
     pos.add(vel);
@@ -50,11 +50,11 @@ void display() {
        stroke(0);
      fill(255,67,23);
   ellipse(pos.x,pos.y,30,30);
- 
+ //if the player dies, reset their position and movement
  if (gameOver==true) { 
-   pos.x=130;
-   pos.y=200;
-   acc.y=0;
+     pos.set(130,200);
+     acc.set(0,0);
+     vel.set(0,0);
  }
   
 }
