@@ -1,6 +1,11 @@
+<<<<<<< HEAD
   // player object to control
   Player p;
   //array list to store the clouds in the background
+=======
+
+ 
+>>>>>>> main
  ArrayList<Cloud> clouds;
  //list to store the obstacles
  ArrayList<Pipe> pipes; 
@@ -27,7 +32,11 @@ void setup() {
 
 void draw() { 
   background(113,211,252); 
+<<<<<<< HEAD
    //update and display everycloud
+=======
+     
+>>>>>>> main
    for(Cloud c : clouds) {
      c.update();
      c.display();
