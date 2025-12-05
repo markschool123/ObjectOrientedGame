@@ -52,6 +52,10 @@ if (gameOver==true) {
   text("YOU DIED", width/2, height/2);
 }
 
+if (mousePressed) { 
+  gameOver=false;
+}
+
 
 }
 

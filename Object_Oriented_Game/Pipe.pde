@@ -14,7 +14,7 @@ class Pipe {
     //PVector values for speed and position
     
     pos = new PVector (width,0); 
-    speed = new PVector (-2.5,0);
+    speed = new PVector (-4.5,0);
     
     //random height for the top height
     top= random(50,20);
