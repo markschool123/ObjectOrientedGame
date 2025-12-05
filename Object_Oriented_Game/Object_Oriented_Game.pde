@@ -50,6 +50,7 @@ if (gameOver==true) {
   textAlign(CENTER, CENTER);
   textSize(40);
   text("YOU DIED", width/2, height/2);
+  text("click to restart!", 200,300);
 }
 
 if (mousePressed) { 
@@ -60,6 +61,7 @@ if (mousePressed) {
 }
 
 void youDied() { 
+  
   gameOver=true;
 }
 

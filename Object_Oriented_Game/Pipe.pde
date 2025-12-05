@@ -52,6 +52,11 @@ class Pipe {
          (p.pos.y-15<top || p.pos.y+15> height-bottom))
          {
      youDied();
+     
+     if (gameOver==true) {
+       pos.x=-100;
+     }
+     
    }
     
   }

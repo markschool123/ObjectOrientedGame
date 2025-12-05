@@ -50,5 +50,12 @@ void display() {
        stroke(0);
      fill(255,67,23);
   ellipse(pos.x,pos.y,30,30);
+ 
+ if (gameOver==true) { 
+   pos.x=130;
+   pos.y=200;
+   acc.y=0;
+ }
+  
 }
 }
