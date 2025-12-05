@@ -40,7 +40,7 @@ class Pipe {
      //once the pipe goes off screen, it resets to a new position and gap
      //this helps the variety of pipe size and makes gameplay not repetitive
   if (pos.x < -pipeWidth) {
-    gap=random(80,250);
+    gap=random(80,150);
     top=random(40,250);
     bottom=height-(top+gap);
     //move the pipe back to the right
@@ -63,8 +63,9 @@ class Pipe {
      youDied();
      
      //move the pipe off the screen
+     //set further back to give player time to react
      if (gameOver==true) {
-       pos.set(500,0);;
+       pos.set(700,0);;
      }
      
    }
